@@ -1,13 +1,13 @@
-using NUnit.Framework;
+using Xunit;
 
 namespace QueueInsightsTest
 {
     public class Tests
     {
-        [Test]
+        [Fact]
         public void TestAlwaysPass()
         {
-            Assert.Pass();
+            
         }
     }
 }
