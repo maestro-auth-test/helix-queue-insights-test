@@ -11,7 +11,7 @@ jobs:
         parameters:
           HelixSource: pr/test/queueinsights/$(Build.SourceBranch) # sources must start with pr/, official/, prodcon/, or agent/
           HelixType: type/tests
-          HelixTargetQueues: Windows.10.Amd64.Open.Arcade;Ubuntu.1804.Amd64.Open.Arcade # specify appropriate queues here; see https://helix.dot.net/ for a list of queues
+          HelixTargetQueues: Windows.10.Amd64.Open;Ubuntu.1804.Amd64.Open # specify appropriate queues here; see https://helix.dot.net/ for a list of queues
           XUnitProjects: $(Build.SourcesDirectory)/src/QueueInsightsTest/QueueInsightsTest.csproj # specify your xUnit projects (semicolon delimited) here!
           XUnitPublishTargetFramework: netcoreapp3.1 # specify your publish target framework here
           XUnitTargetFramework: netcoreapp3.1 # specify the framework you want to use for the xUnit runner
@@ -21,4 +21,4 @@ jobs:
           WaitForWorkItemCompletion: true
           DotNetCliPackageType: sdk
           DotNetCliVersion: 3.1.410 # full list of versions here: https://raw.githubusercontent.com/dotnet/core/main/release-notes/releases.json
-          Creator: dotnet-helix-low-bot # specify an appropriate Creator here -- required for external builds
+          Creator: helix-queue-insights-test # specify an appropriate Creator here -- required for external builds
