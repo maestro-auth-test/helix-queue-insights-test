@@ -3,10 +3,11 @@ trigger:
 
 schedules:
   - cron: "0 0 * * *"
-    displayName: Daily midnight build to keep in MoT
+    displayName: Daily build to keep in MoT
     branches:
       include:
         - main
+    always: true
 
 pool:
   vmImage: windows-latest
